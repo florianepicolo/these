@@ -1,5 +1,7 @@
 main.aux
+main.bbl
 main.bcf
+main.blg
 main.lof
 main.log
 main.maf
@@ -8,3 +10,4 @@ main.out
 main.pdf
 main.run.xml
 main.toc
+/corps/*.aux
