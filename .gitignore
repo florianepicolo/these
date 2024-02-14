@@ -3,8 +3,7 @@ main.bcf
 main.lof
 main.log
 main.maf
-main.mtc
-main.mtc0
+main.mtc*
 main.out
 main.pdf
 main.run.xml
