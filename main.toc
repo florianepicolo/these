@@ -1,0 +1,44 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Gènes et génomes}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Évolution des gènes : mutations, délétions, insertions}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Duplication complète de génome}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Coévolution}{7}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Naissance et mort des gènes}{8}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Phylogénie des animaux}{10}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Principe de la phylogénie}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Homologie, orthologie et paralogie}{12}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Arbre de la vie des animaux}{13}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Spécificité des téléostéens}{16}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Bases de données}{17}{subsection.1.2.5}%
+\contentsline {subsubsection}{Ensembl}{17}{subsubsection*.13}%
+\contentsline {subsubsection}{Genomicus}{18}{subsubsection*.14}%
+\contentsline {section}{\numberline {1.3}Communication cellulaire}{20}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Interactions protéiques}{20}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Relation ligand-récepteur}{22}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}KEGG}{22}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Notions supplémentaires : Question de dosage des gènes}{26}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Article 1 - Moment d’apparition des gènes impliqués dans une voie de signalisation humaine}{27}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Contexte de l'étude}{27}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Matériels et méthode}{27}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Résultats}{28}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Conclusion}{28}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Article}{30}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Article 2 - Moment d’apparition des gènes impliqués dans une voie de transduction du signal humaine}{60}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Contexte de l'étude}{60}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Matériels et méthode}{60}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Résultats}{61}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Conclusion}{61}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Article}{63}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Discussion}{72}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Étude sur les moments d’apparition}{72}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Étude sur les téléostéens}{76}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Limite du matériel et de la méthode}{78}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Perspectives}{80}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{81}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Annexes}{82}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Article 3}{83}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Article 1 - Suppl. Data 1}{90}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Article 1 - Suppl. Data 2}{115}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Article 1 - Suppl. Data 3}{140}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Article 1 - Suppl. Data 4}{165}{section.6.5}%
