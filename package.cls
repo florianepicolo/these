@@ -36,21 +36,31 @@
 
 \usepackage[french]{minitoc}                    % Chargez minitoc avant hyperref et avant titlsec
 \usepackage[explicit]{titlesec}         % permet de gérer la mise en forme des titres de sections
-\usepackage[colorlinks=false]{hyperref}                   % Chargez hyperref après tous les autres packages
-\hypersetup{breaklinks=true}            % permet de casser les hyperliens
-
+\usepackage[colorlinks=true]{hyperref}                   % Chargez hyperref après tous les autres packages
 %%% Bibliographie
 \usepackage{csquotes}                   % permet de citer d'une certaine façon
 \usepackage[
     style=apa,
     backend=biber,
     sorting=nyt,
-    hyperref=false
+    hyperref=true
 ]{biblatex}
 \addbibresource{corps/Ma bibliothèque.bib}
 \DeclareDelimAlias{finalnamedelim}{multinamedelim}
 
-
+%% Gérer la couleur des liens/citations
+\hypersetup{
+    bookmarksopen=true,
+    bookmarksopenlevel=0,
+    hypertexnames=false,
+    citecolor=black,                      % The color of citations
+    linkcolor=black,                      % The color of references to document elements (sections, figures, etc)
+    linktoc=true,                       % includes page-numbers in links
+    urlcolor=black,                       % The color of hyperlinks (URLs)
+    unicode,
+    breaklinks=true,                     % permet de casser les liens
+    hypertexnames=false,                 % Fixes wrong linking with subequations, but might have side-effects (check index links!)
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%  Styles  %%%%%%%%%%

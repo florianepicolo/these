@@ -11,3 +11,5 @@ main.pdf
 main.run.xml
 main.toc
 /corps/*.aux
+main.fdb_latexmk
+main.synctex.gz
