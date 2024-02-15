@@ -6,12 +6,8 @@
 \usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 \usepackage{environ}                    % avoir les commandes pour ses environnments personnalisés
 \usepackage[table]{xcolor}              % colorer dans les tableaux
-\usepackage[explicit]{titlesec}         % permet de gérer la mise en forme des titres de sections
 \usepackage[french]{babel}              % langue Français     
-\usepackage[french]{minitoc}            % pour les petites tables des matières
-\dominitoc
-\usepackage[hidelinks]{hyperref}        % cacher les liens hypertextes
-\hypersetup{breaklinks=true}            % permet de casser les hyperliens
+% \usepackage[french]{minitoc}            % pour les petites tables des matières
 \usepackage{caption}                    % pour les légendes images
 \usepackage{subcaption}                 % sous-légendes images
 \usepackage[titletoc,title]{appendix}   % gestion annexes
@@ -24,7 +20,6 @@
 \usepackage[utf8]{inputenc}             % permet de mettre des caractères particulier
 \usepackage[T1]{fontenc}                % permet de gérer le rendu des caractères spéciaux
 \usepackage[skins]{tcolorbox}           % avoir des boites colorées
-\usepackage{titlesec}                   % permet de modifier les sections
 \usepackage{changepage}                 % permet d'ajuster les marges pour des parties spécifiques de votre document
 \usepackage{authblk}                    % utile pour placer les affiliations des auteurs
 \usepackage{url}                        % permet de mettre des liens
@@ -37,10 +32,12 @@
 \usepackage{xltabular}                  % pour scinder les tableaux
 \usepackage{eso-pic}
 \usepackage{transparent}
-\setcounter{tocdepth}{3}                % permet d'afficher une profondeur de 3 dans la table des matières
-% \usepackage{background}
-% \usepackage{afterpage}
+\setcounter{tocdepth}{3}
 
+\usepackage[french]{minitoc}                    % Chargez minitoc avant hyperref et avant titlsec
+\usepackage[explicit]{titlesec}         % permet de gérer la mise en forme des titres de sections
+\usepackage[colorlinks=false]{hyperref}                   % Chargez hyperref après tous les autres packages
+\hypersetup{breaklinks=true}            % permet de casser les hyperliens
 
 %%% Bibliographie
 \usepackage{csquotes}                   % permet de citer d'une certaine façon
@@ -48,9 +45,11 @@
     style=apa,
     backend=biber,
     sorting=nyt,
+    hyperref=false
 ]{biblatex}
 \addbibresource{corps/Ma bibliothèque.bib}
 \DeclareDelimAlias{finalnamedelim}{multinamedelim}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,75 +57,102 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%% TITRE
-%% 1. page avec un chapitre et un petit sommaire
 \newlength\Aux              % Permet d'utiliser Aux au lieu d'une taille
 \newlength\BoxWd            % Pareil avec les Box
 
+ % chapter tiltes formatting
+ \titleformat{\chapter}[display]%
+ {\fontsize{30}{8}\bfseries\selectfont%
+   \settowidth\Aux{\textcolor{white}{\Huge\thechapter}}%
+   \ifnum\Aux>\BoxWd%
+     \setlength\BoxWd{\Aux}%
+   \else\fi%
+ }%
+ {%
+   {\hspace*{-1.5mm}\normalfont\fontsize{14}{6}\selectfont{Chapitre}}\\%
+   \colorbox{teal}{%
+     \parbox[c][20mm][t]{\BoxWd}{%
+       \vspace{2mm}\centering\textcolor{white}{\Huge\thechapter}%
+     }%
+   }%
+ }%
+ {-10mm}%
+ {%
+   \vspace{-3.5mm}\hspace*{15mm}\titlerule\\\\\hspace*{15mm}#1%
+ } %\centering
 
-% \titleformat{name=\chapter}[display] %, numberless
-% {\fontsize{26}{6}\bfseries\selectfont}
-% {} % Aucune modification pour les chapitres sans numéro
-% {0mm}
-% {\vspace{-5mm}\hspace*{15mm}\colorbox{teal}{\parbox{\linewidth-15mm}{\textcolor{white}{#1}}}}
+% chapter tiltes formatting
+\titleformat{name=\chapter, numberless}[display]%
+ {\fontsize{26}{6}\bfseries\selectfont%
+   \settowidth\Aux{\textcolor{white}{\Huge\thechapter}}%
+   \ifnum\Aux>\BoxWd%
+     \setlength\BoxWd{\Aux}%
+   \else\fi%
+ }%
+ {%
+   {\hspace*{-1.5mm}\normalfont\fontsize{14}{6}\selectfont{~}}\\%
+   \colorbox{teal}{%
+     \parbox[c][20mm][t]{\BoxWd}{%
+       \vspace{2.5mm}\centering\textcolor{white}{~}%
+     }%
+   }%
+ }%
+ {-10mm}%
+ {%
+   \vspace{-5mm}\hspace*{15mm}\titlerule\\\\\hspace*{15mm}#1%
+ } %\centering
+
+ \titleformat{name=\chapter, numberless}[display]%
+{\fontsize{26}{6}\bfseries\selectfont%
+  \settowidth\Aux{\textcolor{white}{\Huge\thechapter}}%
+  \ifnum\Aux>\BoxWd%
+    \setlength\BoxWd{\Aux}%
+  \else\fi%
+}%
+{%
+  {\hspace*{-1.5mm}\normalfont\fontsize{14}{6}\selectfont{~}}\\%
+  \colorbox{teal}{%
+    \parbox[c][20mm][t]{\BoxWd}{%
+      \vspace{2.5mm}\centering\textcolor{white}{~}%
+    }%
+  }%
+}%
+{-10mm}%
+{%
+  \vspace{-5mm}\hspace*{15mm}\titlerule\\\\\hspace*{15mm}#1%
+} %\centering
 
 
-\titleformat{name=\chapter}[display]
-{\fontsize{30}{8}\bfseries\selectfont
-    \settowidth\Aux{\textcolor{white}{\Huge\thechapter}}
-    \ifnum\Aux>\BoxWd
-    \setlength\BoxWd{\Aux}
-    \else\fi
-}
-{{\hspace*{-1.5mm}\normalfont\fontsize{14}{6}\selectfont{}}\\
-    \colorbox{teal}{
-    \parbox[c][20mm][t]{\BoxWd}{
-    \BoxWd}{\vspace{2mm}\centering\textcolor{white}{~}}} %\Huge\thechapter (à la place du tilde)
-}
-{-10mm}
-{\vspace{-3.5mm}\hspace*{15mm}\titlerule\\\hspace*{15mm}\parbox{\linewidth-15mm}{#1}}
+% chapter tiltes spacing
+\titlespacing*{\chapter}{0pt}{0pt}{50pt}
 
+\titleformat{\section}[block]%
+{\Large\bfseries}{\thesection}%
+{10pt}{\Large{\bfseries{#1}}}
 
-% 2. page avec texte lambda
-\titleformat{name=\chapter, numberless}[display] %, numberless
-{\fontsize{26}{6}\bfseries\selectfont
-    \settowidth\Aux{\textcolor{white}{\Huge\thechapter}}
-    \ifnum\Aux>\BoxWd
-    \setlength\BoxWd{\Aux}
-    \else\fi
-}
-{{\hspace*{-1.5mm}\normalfont\fontsize{14}{6}\selectfont{~}}\\
-    \colorbox{teal}{
-    \parbox[c][20mm][t]{\BoxWd}{
-    \vspace{2.5mm}\centering\textcolor{white}{~}}}
-}
-{-10mm}
-{\vspace{-5mm}\hspace*{15mm}\titlerule\\\\\hspace*{15mm}{#1}} 
+\titleformat{\paragraph}[block]%
+{\normalfont\normalsize\bfseries}%
+{\theparagraph}{1em}{#1}
+
 
 %%%% ENTETE ET BAS DE PAGE
-%% 1. page avec un chapitre et un petit sommaire
+% Style de la première page du chapitre
 \fancypagestyle{firstpage}{ 
-    \fancyhf{}% Clear header/footer
-    
-    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\headrule}{\color{white}}
     \renewcommand{\footrulewidth}{0.5pt}
-    
+    \fancyhf{}% Clear header/footer
     \fancyfoot[R]{\fontsize{8}{8}\selectfont PAGE \thepage}
     \fancyfoot[L]{\fontsize{8}{8}\selectfont \MakeUppercase{\@author}}
 }
-
-%% 2. page avec texte lambda
-\fancypagestyle{plain}{ 
-  \fancyhf{}% Clear header/footer
-
-  \renewcommand{\headrulewidth}{0.5pt}
-  \renewcommand{\footrulewidth}{0.5pt}
-
-  \fancyhead[L]{\fontsize{8}{8}\selectfont\textsc{\MakeLowercase{\leftmark}}}
-
-  \fancyfoot[R]{\fontsize{8}{8}\selectfont PAGE \thepage}
-  \fancyfoot[L]{\fontsize{8}{8}\selectfont \MakeUppercase{\@author}}
+% Style des pages normales
+\fancypagestyle{normalpage}{
+    \renewcommand{\headrulewidth}{0.5pt}
+    \renewcommand{\footrulewidth}{0.5pt}
+    \fancyhf{}% Clear header/footer
+    \fancyhead[L]{\fontsize{8}{8}\selectfont\textsc{\MakeLowercase{\leftmark}}}
+    \fancyfoot[R]{\fontsize{8}{8}\selectfont PAGE \thepage}
+    \fancyfoot[L]{\fontsize{8}{8}\selectfont \MakeUppercase{\@author}} % Ajout du numéro de page à droite
 }
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% COMMANDS %%%%%%%%%%

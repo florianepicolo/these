@@ -1,5 +1,7 @@
 \documentclass[12pt, oneside, a4paper]{package}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%  INFOS   %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,23 +24,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
     \pagedegarde
-    \clearpage
+    \newpage
+
+    \pagestyle{empty} 
+    \input{corps/remerciements}
+    % \newpage
 
     \pagestyle{empty}
-    \include{corps/remerciements}
-    \tableofcontents\thispagestyle{empty}         % table des matières principale
-    \listoffigures\thispagestyle{empty}
-    
-    \pagestyle{plain}
-    \include{corps/introduction}
-    \include{corps/article1}
-    \include{corps/article2}
-    \include{corps/discussion}
+    \tableofcontents\thispagestyle{empty}     % table des matières principale
+    \listoffigures\thispagestyle{empty}  
+    \newpage
+
+    \pagestyle{normalpage}
+    \input{corps/introduction}
+    \input{corps/article1}
+    \input{corps/article2}
+    \input{corps/discussion}
     \input{corps/conclusion}
-    \include{corps/annexes}
+    \input{corps/annexes}
     
     
     \printbibliography
         
-    \pagededos
+\end{document}
+
 \end{document}
