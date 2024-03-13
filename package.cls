@@ -7,7 +7,6 @@
 \usepackage{environ}                    % avoir les commandes pour ses environnments personnalisés
 \usepackage[table]{xcolor}              % colorer dans les tableaux
 \usepackage[french]{babel}              % langue Français     
-% \usepackage[french]{minitoc}            % pour les petites tables des matières
 \usepackage{caption}                    % pour les légendes images
 \usepackage{subcaption}                 % sous-légendes images
 \usepackage[titletoc,title]{appendix}   % gestion annexes
@@ -34,9 +33,9 @@
 \usepackage{transparent}
 \setcounter{tocdepth}{3}
 
-\usepackage[french]{minitoc}                    % Chargez minitoc avant hyperref et avant titlsec
+\usepackage[french]{minitoc}            % Chargez minitoc avant hyperref et avant titlsec
 \usepackage[explicit]{titlesec}         % permet de gérer la mise en forme des titres de sections
-\usepackage[colorlinks=true]{hyperref}                   % Chargez hyperref après tous les autres packages
+\usepackage[colorlinks=true]{hyperref}  % Chargez hyperref après tous les autres packages
 %%% Bibliographie
 \usepackage{csquotes}                   % permet de citer d'une certaine façon
 \usepackage[
@@ -55,11 +54,11 @@
     hypertexnames=false,
     citecolor=black,                      % The color of citations
     linkcolor=black,                      % The color of references to document elements (sections, figures, etc)
-    linktoc=true,                       % includes page-numbers in links
+    linktoc=true,                         % includes page-numbers in links
     urlcolor=black,                       % The color of hyperlinks (URLs)
     unicode,
-    breaklinks=true,                     % permet de casser les liens
-    hypertexnames=false,                 % Fixes wrong linking with subequations, but might have side-effects (check index links!)
+    breaklinks=true,                      % permet de casser les liens
+    hypertexnames=false,                  % Fixes wrong linking with subequations, but might have side-effects (check index links!)
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
